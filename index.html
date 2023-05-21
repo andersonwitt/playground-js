@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playground JS</title>
-  </head>
-  <body>
-    <header>
-        <H1>Playground JS Components</H1>
-    </header>
-    <nav>
-        <article>Components</article>
-        <ul>
-          <li>
-              <a href="#" route="/inline-circle">Inline Circle</a>
-          </li>  
-        </ul>
-    </nav>
-    <main>
-      <div id="root"></div>
-        <inline-circle diameter="1.2em" color="blue"></inline-circle>
-        <inline-circle diameter=".6em" color="gold"></inline-circle>
-    </main>
-    <script type="module" src="./components/inline-circle/index.js"></script>
-    <script src="routes.js"></script>
-  </body>   
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="A javascript components playground documentation page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/bootstrap.css" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <title>Playground JS</title>
+    </head>
+    <body>
+        <div class="fullscreen bg-dark dark-mode row">
+            <app-bar class="bg-darker col-2" title="Playground JS">
+                <h2 class="mt-4 wt-heading text-light">Components</h2>
+                <ul class="wt-list">
+                    <li class="wt-list-item rounded-sm">
+                        <span class="material-icons md-28">face</span>
+                        <a class="link" href="#" route="/app-bar">
+                            AppBar
+                        </a>
+                    </li>
+                    <li class="wt-list-item rounded-sm">
+                        <span class="material-icons md-28">face</span>
+                        <a class="link" href="#" route="/inline-circle">
+                            Inline Circle
+                        </a>
+                    </li>
+                </ul>
+            </app-bar>
+            <main class="col-10">
+                <div id="root"></div>
+                <inline-circle diameter="4.2rem" color="blue"></inline-circle>
+                <inline-circle diameter="6.6rem" color="gold"></inline-circle>
+            </main>
+        </div>
+        <script src="routes.js"></script>
+        <script async type="module" src="./components/bootstrap.js"></script>
+    </body>
 </html>
