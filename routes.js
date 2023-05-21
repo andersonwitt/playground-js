@@ -3,21 +3,38 @@ const links = document.getElementsByClassName("link");
 const pages = {
     "/": {
         file: "",
-        id: "",
+        pageId: "",
+        linkId: "",
     },
     "/inline-circle": {
         file: "/pages/inline-circle.html",
-        id: "inline-circle-page",
+        pageId: "inline-circle-page",
+        linkId: "inline-circle-link",
     },
     "/app-bar": {
         file: "/pages/app-bar.html",
-        id: "app-bar-page",
+        pageId: "app-bar-page",
+        linkId: "app-bar-link",
     },
 };
 
 async function render(pathname) {
-    const element = document.getElementById(pages[pathname].id);
+    const element = document.getElementById(pages[pathname].pageId);
     if (!element) {
+        const allSelectedLinks = document.querySelectorAll(
+            ".wt-list-item.selected"
+        );
+
+        Array.from(allSelectedLinks ?? []).forEach((link) =>
+            link.classList.remove("selected")
+        );
+
+        const link = document.getElementById(pages[pathname].linkId);
+
+        if (!link.classList.contains("selected")) {
+            link.classList.add("selected");
+        }
+
         const res = await fetch(
             `${window.location.origin}${pages[pathname].file}`
         );
@@ -42,6 +59,7 @@ function handleNavigation(event) {
     event.preventDefault();
 
     const url = event.target.getAttribute("route");
+
     history.pushState(null, null, url);
 
     handleLoadPage(url);
