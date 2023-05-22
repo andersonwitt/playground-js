@@ -7,6 +7,7 @@
             name="description"
             content="A javascript components playground documentation page"
         />
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles/bootstrap.css" />
         <link
@@ -40,12 +41,10 @@
                 </section>
             </app-bar>
             <main class="wt-main">
-                <div id="root"></div>
-                <inline-circle diameter="4.2rem" color="blue"></inline-circle>
-                <inline-circle diameter="6.6rem" color="gold"></inline-circle>
+                <div id="root" class="wt-layout"></div>
             </main>
         </div>
-        <script src="routes.js"></script>
-        <script async type="module" src="./components/bootstrap.js"></script>
+        <script type="module" src="routes.js"></script>
+        <script type="module" src="./components/bootstrap.js"></script>
     </body>
 </html>

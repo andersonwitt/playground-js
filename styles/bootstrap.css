@@ -226,7 +226,6 @@ h1 {
 }
 
 @media (max-width: 600px) {
-
     .link-contained {
         cursor: none;
     }
@@ -241,8 +240,13 @@ h1 {
         min-width: 100vw;
         width: 100vw;
     }
-
+    .wt-layout {
+        max-width: 100vw;
+        padding: 1.5rem;
+    }
     .wt-main {
         max-width: 100vw;
+        width: 100vw;
+        padding: 0;
     }
 }
