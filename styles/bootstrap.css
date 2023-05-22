@@ -226,6 +226,14 @@ h1 {
 }
 
 @media (max-width: 600px) {
+
+    .link-contained {
+        cursor: none;
+    }
+
+    body {
+        cursor: none;
+    }
     .root {
         flex-direction: column;
     }
