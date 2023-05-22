@@ -1,4 +1,4 @@
-const links = document.getElementsByClassName("link");
+const links = document.getElementsByClassName("link-contained");
 
 const pages = {
     "/": {
@@ -22,7 +22,7 @@ async function render(pathname) {
     const element = document.getElementById(pages[pathname].pageId);
     if (!element) {
         const allSelectedLinks = document.querySelectorAll(
-            ".wt-list-item.selected"
+            ".link-contained.selected"
         );
 
         Array.from(allSelectedLinks ?? []).forEach((link) =>
@@ -58,7 +58,7 @@ async function handleLoadPage(pathname) {
 function handleNavigation(event) {
     event.preventDefault();
 
-    const url = event.target.getAttribute("route");
+    const url = event.target.getAttribute("href");
 
     history.pushState(null, null, url);
 
