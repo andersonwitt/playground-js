@@ -1,4 +1,10 @@
 export class AppBar extends HTMLElement {
+    constructor() {
+        super();
+        const p = document.createElement('p')
+        p.textContent = 'It works!'
+        this.appendChild(p)
+    }
     connectedCallback() {
         const innerContent = this.innerHTML;
         let titleHtml = "";
@@ -25,7 +31,7 @@ export class AppBar extends HTMLElement {
                     font-weight: 600;
                 }
             </style>
-            <nav class="app-bar-nav">
+            <nav class="app-bar-nav" data-testid="app-bar">
                 ${titleHtml}
                 <section>
                     ${innerContent}
