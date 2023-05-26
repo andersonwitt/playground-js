@@ -1,10 +1,5 @@
 export class AppBar extends HTMLElement {
-    constructor() {
-        super();
-        const p = document.createElement('p')
-        p.textContent = 'It works!'
-        this.appendChild(p)
-    }
+
     connectedCallback() {
         const innerContent = this.innerHTML;
         let titleHtml = "";
@@ -49,8 +44,8 @@ export class AppBar extends HTMLElement {
         switch (name) {
             case "title":
                 const element = this.querySelector("app-bar-title");
-                if (element?.innerContent) {
-                    element.innerContent = newValue;
+                if (element?.textContent) {
+                    element.textContent = newValue;
                 }
                 break;
         }

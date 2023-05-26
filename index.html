@@ -20,8 +20,8 @@
         <div class="fullscreen bg-dark dark-mode root">
             <app-bar class="bg-darker wt-nav" title="Playground JS">
                 <div class="mt-4 wt-icon-list">
-                    <span class="material-icons md-28"> toggle_off </span>
-                    <h2 class="wt-heading ">Components</h2>
+                    <span data-testid="components-icon" class="material-icons md-28"> toggle_off </span>
+                    <h2 class="wt-heading">Components</h2>
                 </div>
                 <section>
                     <a
@@ -41,7 +41,7 @@
                 </section>
             </app-bar>
             <main class="wt-main">
-                <div id="root" class="wt-layout"></div>
+                <div data-testid="root-template" id="root" class="wt-layout"></div>
             </main>
         </div>
         <script type="module" src="routes.js"></script>

@@ -4,7 +4,10 @@
   "description": "",
   "main": "routes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest",
+    "test:all": "npx jest",
+    "test:watch": "npx jest --watch-all=true",
+    "start": "http-server-spa . index.html 5000 & open http://localhost:5000"
   },
   "repository": {
     "type": "git",
