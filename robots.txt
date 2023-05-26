@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /routes.js
+Disallow: /components/bootstrap.js
+Disallow: /styles/bootstrap.css
+Disallow: /favicon.png
