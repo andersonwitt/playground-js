@@ -16,6 +16,11 @@ const pages = {
         pageId: "app-bar-page",
         linkId: "app-bar-link",
     },
+    "/reactivity": {
+        file: "/pages/reactivity.html",
+        pageId: "reactivity-page",
+        linkId: "reactivity-link",
+    },
 };
 
 async function render(pathname) {
@@ -25,7 +30,7 @@ async function render(pathname) {
             ".link-contained.selected"
         );
 
-        Array.from(allSelectedLinks ?? []).forEach((link) =>
+        Array.from(allSelectedLinks || []).forEach((link) =>
             link.classList.remove("selected")
         );
 

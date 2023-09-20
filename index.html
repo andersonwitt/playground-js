@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-            name="description"
-            content="A javascript components playground documentation page"
-        />
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/bootstrap.css" />
-        <title>Playground JS</title>
-    </head>
-    <body>
-        <div class="fullscreen bg-dark dark-mode root">
-            <app-bar class="bg-darker wt-nav" title="Playground JS">
-                <div class="mt-4 wt-icon-list">
-                    <span data-testid="components-icon" class="material-icons md-28"> toggle_off </span>
-                    <h2 class="wt-heading">Components</h2>
-                </div>
-                <section>
-                    <a
-                        id="app-bar-link"
-                        class="link-contained rounded-sm"
-                        href="/app-bar"
-                    >
-                        AppBar
-                    </a>
-                    <a
-                        id="inline-circle-link"
-                        class="link-contained rounded-sm"
-                        href="/inline-circle"
-                    >
-                        Inline Circle
-                    </a>
-                </section>
-            </app-bar>
-            <main class="wt-main">
-                <div data-testid="root-template" id="root" class="wt-layout"></div>
-            </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="A javascript components playground documentation page"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/bootstrap.css" />
+    <title>Playground JS</title>
+  </head>
+  <body>
+    <div class="fullscreen bg-dark dark-mode root">
+      <app-bar class="bg-darker wt-nav" title="Playground JS">
+        <div class="mt-4 wt-icon-list">
+          <span
+            data-testid="components-icon"
+            class="material-symbols-outlined md-28"
+          >
+            toggle_on
+          </span>
+          <h2 class="wt-heading">Components</h2>
         </div>
-        <link
-            async
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-        <script async type="module" src="routes.js"></script>
-        <script async type="module" src="./components/bootstrap.js"></script>
-    </body>
+        <section>
+          <a
+            id="app-bar-link"
+            class="link-contained rounded-sm"
+            href="/app-bar"
+          >
+            AppBar
+          </a>
+          <a
+            id="inline-circle-link"
+            class="link-contained rounded-sm"
+            href="/inline-circle"
+          >
+            Inline Circle
+          </a>
+        </section>
+        <div class="mt-4 wt-icon-list">
+          <span
+            data-testid="fundamentals-icon"
+            class="material-symbols-outlined"
+          >
+            school
+          </span>
+          <h2 class="wt-heading">Fundamentals</h2>
+        </div>
+        <section>
+          <a
+            id="reactivity-link"
+            class="link-contained rounded-sm"
+            href="/reactivity"
+          >
+            Reactivity
+          </a>
+        </section>
+      </app-bar>
+      <main class="wt-main">
+        <div data-testid="root-template" id="root" class="wt-layout"></div>
+      </main>
+    </div>
+    <link
+      async
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      async
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <script async type="module" src="routes.js"></script>
+    <script async type="module" src="./components/bootstrap.js"></script>
+  </body>
 </html>
