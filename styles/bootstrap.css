@@ -3,6 +3,10 @@
     --gutter-width: 15px;
 }
 
+* {
+    font-display: swap;
+}
+
 body {
     margin: 0;
     display: block;
